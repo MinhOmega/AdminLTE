@@ -169,10 +169,10 @@ namespace LiteCommerce.Admin.Controllers
             var verifyUrl = "/Account/ResetPassword?Resetcode=" + activationCode;
             var link = Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, verifyUrl);
 
-            var fromEmail = new MailAddress("hotrolte2020@gmail.com", "Forgot Password");
+            var fromEmail = new MailAddress("Your_Email_Here", "Forgot Password");
             var toEmail = new MailAddress(emailID);
-            var fromEmailPassword = "minhomega123";
-            // https://www.google.com/settings/security/lesssecureapps
+            var fromEmailPassword = "Your_Password_Here";
+            // forward this link for more information https://www.google.com/settings/security/lesssecureapps
 
             string subject = "";
             string body = "";
@@ -283,7 +283,7 @@ namespace LiteCommerce.Admin.Controllers
             }
             else
             {
-                return RedirectToAction("ErrorRessetCode","Error");
+                return RedirectToAction("ErrorRessetCode", "Error");
             }
         }
 
